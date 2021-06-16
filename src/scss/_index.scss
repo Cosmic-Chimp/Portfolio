@@ -1,0 +1,18 @@
+@forward './abstracts/typography';
+@forward './abstracts/colors';
+@forward './components/banner';
+@forward './abstracts/mixins';
+@forward './components/navbar';
+// use the forward property to store all fonts/color in here
+//still make color/font vars in their respective files but use the @forward property to import them her
+//then use the @use property linking to the folder where the inde.scss
+//is found in,
+
+//eg
+
+// @use '../abstracts' as a;
+
+// .card {
+//   font-size: a.$font-size;
+//   color: a.$blue;
+// }

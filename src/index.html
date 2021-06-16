@@ -7,19 +7,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rueben</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Texturina:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
-    <div class="background">
-      <nav>
-        <div class="navbar">
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul>
+    <!-- <div class="parallax"></div> -->
+    <section id="opener">
+      <div class="wlcomeBanner">
+        <h1>Howzit<span class="empha"> , I'm Rueben</span></h1>
+        <button class="workBtn">View My Work</button>
+      </div>
+    </section>
+
+    <section class="navigation">
+      <ul class="menuItems">
+        <div class="hamburger icon">
+          <span class="line top"></span>
+          <span class="line middle"></span>
+          <span class="line bottom"></span>
         </div>
-      </nav>
-    </div>
+
+        <script
+          type="text/javascript"
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+        ></script>
+
+        <script type="text/javascript">
+          var $;
+          $(".hamburger").click(function () {
+            toggleMenu();
+          });
+        </script>
+
+        <div id="logo">
+          <img src="./scss/abstracts/images/logoV2 IMPROVED.svg" alt="Logo" />
+        </div>
+        <li><a class="items" href="#" onclick="toggleMenu();">Home</a></li>
+        <li><a class="items" href="#" onclick="toggleMenu();">Projects</a></li>
+        <li><a class="items" href="#" onclick="toggleMenu();">Timeline</a></li>
+        <li><a class="items" href="#" onclick="toggleMenu();">About</a></li>
+        <li><a class="items" href="#" onclick="toggleMenu();">Socials</a></li>
+      </ul>
+    </section>
+
+    <div class="parallax"></div>
+    <script src="./main.js"></script>
   </body>
 </html>

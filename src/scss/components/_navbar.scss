@@ -1,0 +1,72 @@
+@use '../abstracts/colors';
+@use '../abstracts/typography.scss';
+@use '../abstracts/mixins';
+
+ul {
+  list-style-type: none;
+  padding: 0 !important;
+}
+.menuItems a {
+  color: colors.$white;
+  text-decoration: none;
+}
+.menuItems {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-between;
+  background: #212121;
+  height: 10vh;
+  width: 100%;
+  margin: 0;
+}
+.navigation {
+  @include mixins.screen("mobile") {
+    .line {
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background: white;
+      border-radius: 15%;
+      transition: all cubic-bezier(0.5, 0.1, 1, 1) 0.25s;
+    }
+    .top {
+      top: 25%;
+    }
+    .middle {
+      top: 50%;
+    }
+    .bottom {
+      top: 75%;
+    }
+    .icon.close .top {
+      transform: rotate(45deg);
+      top: 30%;
+    }
+    .icon.close .middle,
+    .icon.close .bottom {
+      transform: rotate(-45deg);
+      top: 30%;
+    }
+    .hamburger {
+      position: sticky;
+      display: flex;
+      right: 0;
+      height: 3rem;
+      width: 5rem;
+      float: right;
+    }
+    & .menuItems .items {
+      display: none;
+    }
+  }
+}
+div#logo img {
+  width: 1rem;
+  height: 1rem;
+  object-fit: cover;
+  @include mixins.screen("mobile") {
+    display: none;
+  }
+}
