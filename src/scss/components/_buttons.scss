@@ -1,18 +1,100 @@
 @use '../abstracts/typography.scss';
 @use '../abstracts/colors';
 @use '../abstracts/mixins';
-.workBtn {
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: absolute;
-  top: 65%;
-  background: linear-gradient(91.08deg, #00b898 -16.5%, rgba(3, 3, 3, 0) 200%);
+  width: 8em;
   height: 2.5em;
-  width: 15em;
+  margin: 20px;
+  top: 60vh;
+  // perspective: 1000;
+  // -webkit-perspective: 1000;
+  // backface-visibility: hidden;
+  // -webkit-backface-visibility: hidden;
+  // background: #fff;
+}
+
+.pulse-button {
+  transition: ease-in-out;
+  position: absolute;
+  width: 8em;
+  height: 2.5em;
+  font-size: 1em;
+  padding: 2px;
   text-align: center;
-  border-radius: 15px;
-  border: 0.05rem solid colors.$black;
-  box-shadow: 0px 0.35em 6px rgba(0, 0, 0, 0.65);
-  &:hover {
-    cursor: pointer;
-    color: colors.$white;
+  vertical-align: middle;
+  line-height: 2.5em;
+  // letter-spacing: -1px;
+  color: white;
+  border: none;
+  border-radius: 2em;
+  background: linear-gradient(91.08deg, #00b898 -16.5%, rgba(3, 3, 3, 0) 200%);
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(#00b898, 0.5);
+  animation: pulse 2.5s infinite;
+  -webkit-animation: pulse 2.5s infinite;
+}
+.pulse-button:hover {
+  animation: none;
+  -webkit-animation: none;
+}
+
+// uncomment after development
+@keyframes pulse {
+  0% {
+    transform: scale(90%);
+  }
+  50% {
+    transform: scale(100%);
+    box-shadow: 0 0 0 1.25rem rgba(#9bdede, 0);
+  }
+  100% {
+    transform: scale(90%);
+    box-shadow: 0 0 0 0 rgba(#9bdede, 40%);
   }
 }
+
+// .workBtn {
+//   position: absolute;
+//   top: 65%;
+//   height: 2.5em;
+//   width: 15em;
+//   text-align: center;
+//   border-radius: 1.25em;
+//   border: 0.05rem solid colors.$black;
+//   box-shadow: 0px 0.35em 6px rgba(0, 0, 0, 0.65);
+//   font-size: 1em;
+//   &:hover {
+//     cursor: pointer;
+//     color: colors.$white;
+//   }
+// }
+
+// .btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border-radius: 0.9em;
+//   text-align: center;
+// }
+// .btn.Kode {
+//   position: absolute;
+//   max-height: 1rem;
+//   max-width: 30%;
+//   bottom: -65%;
+//   left: 5%;
+//   background: red;
+// }
+
+// .btn.live {
+//   position: absolute;
+//   max-height: 1rem;
+//   max-width: 30%;
+//   bottom: -65%;
+//   right: 5%;
+//   background: blue;
+// }
