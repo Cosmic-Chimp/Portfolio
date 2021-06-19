@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Cosmic-Chimp/Portfolio/issues"
   },
-  "homepage": "https://github.com/Cosmic-Chimp/Portfolio#readme",
+  "homepage": "https://github.com/Cosmic-Chimp/Portfolio",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "sass": "^1.35.1"
