@@ -58,6 +58,21 @@
   }
 }
 
+#contactBTN {
+  font-size: 1.15rem;
+  border-radius: 1rem;
+  padding: 0.35rem 2.2rem;
+  color: colors.$bBlue;
+  border-color: colors.$litePrim;
+  background-color: colors.$bgClr;
+  &:hover {
+    cursor: pointer;
+    background-color: colors.$drkrPrim;
+    transition: all ease-in-out 250ms;
+    transform: scale(1.2);
+  }
+}
+
 // .workBtn {
 //   position: absolute;
 //   top: 65%;

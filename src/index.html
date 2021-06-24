@@ -23,17 +23,21 @@
   </head>
   <body>
     <!-- <div class="parallax"></div> -->
-    <section id="opener">
+    <section id="home"></section>
+    <div id="opener">
       <div class="wlcomeBanner">
         <h1>Howzit<span class="empha"> , I'm Rueben</span></h1>
-        <div class='container'>
-          <div class='pulse-button' onclick="window.location.href='#secondary'">View My Work</div>
+        <div class="container">
+          <div class="pulse-button" onclick="window.location.href='#secondary'">
+            View My Work
+          </div>
         </div>
         <!-- <button class="workBtn" href="#secondary">View My Work</button> -->
       </div>
-    </section>
+    </div>
+    <section id="start"></section>
 
-    <section id="secondary">
+    <div id="secondary">
       <nav id="navigation">
         <div class="hamburger icon">
           <div class="line top"></div>
@@ -57,39 +61,180 @@
               alt="logosvg"
           /></a>
         </div> -->
+        
         <ul class="menuItems">
           <li id="logo">
-            <a><img src="./scss/abstracts/images/logoV2 IMPROVED.svg"></img></a>
+            <img id="logo" src="./scss/abstracts/images/logoV2 IMPROVED.svg"></img>
           </li>
-          <li><a onclick="toggleMenu();">Home</a></li>
-          <li><a onclick="toggleMenu();">Projects</a></li>
-          <li><a onclick="toggleMenu();">Timeline</a></li>
-          <li><a onclick="toggleMenu();">About</a></li>
+          <li><a class="hover" href="#home" onclick="toggleMenu();">Home</a></li>
+          <li><a class="hover" href="#start" onclick="toggleMenu();">Projects</a></li>
+          <li><a class="hover" href="#timeline" onclick="toggleMenu();">Timeline</a></li>
+          <li><a class="hover" href="#about" onclick="toggleMenu();">About</a></li>
+          <li><a href="#contact" onclick="toggleMenu();"><button id="contactBTN" >Contact</button></a></li>
         </ul>
       </nav>
-    </section>
-    
-    <section id="projects">
+    </div>
+
+    <div id="projects">
       <div class="pjHead"><h1 class="empha">Projects</h1></div>
-        <div class="carousel">
-          <div class="carousel__item carousel__item--visible">
-            <img src="./scss/abstracts/images/enigmatic.png" />
-          </div>
-          <div class="carousel__item">
-            <img src="./scss/abstracts/images/Útan Mærr.png" />
-          </div>
-          <div class="carousel__item">
-            <img src="./scss/abstracts/images/download (1).jpg" />
-          </div>
-    
-          <div class="carousel__actions">
-            <button id="carousel__button--prev" aria-label="Previous slide"><</button>
-            <button id="carousel__button--next" aria-label="Next slide">></button>
-          </div>
+      <div class="carousel">
+        <div class="carousel__item carousel__item--visible">
+          <img src="./scss/abstracts/images/enigmatic.png" />
+        </div>
+        <div class="carousel__item">
+          <img src="./scss/abstracts/images/Útan Mærr.png" />
+        </div>
+        <div class="carousel__item">
+          <img src="./scss/abstracts/images/download (1).jpg" />
         </div>
 
-    </section>
+        <div class="carousel__actions">
+          <button id="carousel__button--prev" aria-label="Previous slide">
+            <
+          </button>
+          <button id="carousel__button--next" aria-label="Next slide">></button>
+        </div>
+      </div>
+    </div>
+    <section id="timeline"></section>
+    <div class="progress">
+      <div class="jhead">
+        <h1 class="empha">This has been My Journey Thus Far ...</h1>
+      </div>
+      <div class="wrapper">
+        <div class="center-line"></div>
+        <div class="row row-1">
+          <section>
+            <div class="icon"></div>
+            <div class="details">
+              <span class="title">The Genesis of my Passion</span>
+              <span>December 2020</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
+              qui veroes praesentium maiores, sint eos vero sapiente voluptas
+              debitis dicta dolore.
+            </p>
+            <div class="bottom">
+              <!-- <a href="#">Read more</a> -->
+              <!-- <i>- Someone famous</i> -->
+            </div>
+          </section>
+        </div>
+        <div class="row row-2">
+          <section>
+            <div class="icon"></div>
+            <div class="details">
+              <span class="title">Title of Section 2</span>
+              <span>2nd Jan 2021</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
+              qui veroes praesentium maiores, sint eos vero sapiente voluptas
+              debitis dicta dolore.
+            </p>
+            <div class="bottom">
+              <!-- <a href="#">Read more</a>
+                <i>- Someone famous</i> -->
+            </div>
+          </section>
+        </div>
+        <div class="row row-1">
+          <section>
+            <div class="icon"></div>
+            <div class="details">
+              <span class="title">Title of Section 3</span>
+              <span>3rd Jan 2021</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
+              qui veroes praesentium maiores, sint eos vero sapiente voluptas
+              debitis dicta dolore.
+            </p>
+            <div class="bottom">
+              <!-- <a href="#">Read more</a>
+                <i>- Someone famous</i> -->
+            </div>
+          </section>
+        </div>
+        <div class="row row-2">
+          <section>
+            <div class="icon"></div>
+            <div class="details">
+              <span class="title">Title of Section 4</span>
+              <span>4th Jan 2021</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
+              qui veroes praesentium maiores, sint eos vero sapiente voluptas
+              debitis dicta dolore.
+            </p>
+            <div class="bottom">
+              <!-- <a href="#">Read more</a>
+                <i>- Someone famous</i> -->
+            </div>
+          </section>
+        </div>
+        <div class="row row-1">
+          <section>
+            <div class="icon"></div>
+            <div class="details">
+              <span class="title">Title of Section 5</span>
+              <span>5th Jan 2021</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
+              qui veroes praesentium maiores, sint eos vero sapiente voluptas
+              debitis dicta dolore.
+            </p>
+            <div class="bottom">
+              <!-- <a href="#">Read more</a>
+                <i>- Someone famous</i> -->
+            </div>
+          </section>
+        </div>
+        <div class="row row-2">
+          <section>
+            <div class="icon"></div>
+            <div class="details">
+              <span class="title">Title of Section 6</span>
+              <span>6th Jan 2021</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
+              qui veroes praesentium maiores, sint eos vero sapiente voluptas
+              debitis dicta dolore.
+            </p>
+            <div class="bottom">
+              <!-- <a href="#">Read more</a>
+                <i>- Someone famous</i> -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <section id="about"></section>
+    <div class="aboutMe">
+      <div class="jhead"><h1 class="empha">Who is this guy?</h1></div>
+      <div class="box">
+        <div class="abt">
+          <h2 id="abtH2">About Me</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            voluptatem numquam eius facere cum. Aut cumque, accusantium vero quo
+            laudantium nostrum delectus! Veniam adipisci repellat, quaerat ullam
+            assumenda itaque magni!
+          </p>
+          <div class="socials">
+            <a class="smIcons" href="#"><img src="./scss/abstracts/icons/iconmonstr-github-1.svg" alt="github-Link"></a>
+            <a class="smIcons" href="#"><img src="./scss/abstracts/icons/iconmonstr-linkedin-4.svg" alt="linkedin-Link"></a>
+            <a class="smIcons" href="#"><img src="./scss/abstracts/icons/iconmonstr-gmail-4.svg" alt="email-link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="parallax"></div>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

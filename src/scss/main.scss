@@ -12,6 +12,13 @@
 @use 'components/banner';
 @use 'components/navbar';
 @use 'components/projects';
+@use 'components/timeline';
+@use 'components/aboutMe';
+
+// BODY Styling //
+* {
+  box-sizing: border-box;
+}
 body {
   box-sizing: border-box;
   overflow: unset;

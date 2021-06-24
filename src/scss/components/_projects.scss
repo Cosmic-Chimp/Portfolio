@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5vmin;
+  padding: 3vmax;
   font-size: 2rem;
   // margin: 10vh;
 }
@@ -31,7 +31,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  margin-bottom: 5vmin;
+  // margin-bottom: 5vmin;
 }
 
 .carousel .carousel__item,

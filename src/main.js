@@ -62,18 +62,9 @@ const links = document.querySelectorAll(".menuItems li");
     updateSlidePosition();
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
+  const scroll = new SmoothScroll('.menuItems li a[href*="#"]', {
+    speed:1000
+  });
 
   // $('input').on('change', function() {
   //   $('body').toggleClass('blue');
