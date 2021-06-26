@@ -2,6 +2,13 @@
 @use '../abstracts/colors';
 @use '../abstracts/mixins';
 
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: colors.$black;
+  }
+}
 .container {
   display: flex;
   justify-content: flex-end;

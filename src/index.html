@@ -26,10 +26,10 @@
     <section id="home"></section>
     <div id="opener">
       <div class="wlcomeBanner">
-        <h1>Howzit<span class="empha"> , I'm Rueben</span></h1>
+        <h1>Hey<span class="empha"> , I'm Rueben</span></h1>
         <div class="container">
-          <div class="pulse-button" onclick="window.location.href='#secondary'">
-            View My Work
+          <div class="pulse-button">
+            <a href="#start">View My Work</a>
           </div>
         </div>
         <!-- <button class="workBtn" href="#secondary">View My Work</button> -->
@@ -37,7 +37,7 @@
     </div>
     <section id="start"></section>
 
-    <div id="secondary">
+    <!-- <div id="secondary"> -->
       <nav id="navigation">
         <div class="hamburger icon">
           <div class="line top"></div>
@@ -54,18 +54,14 @@
             toggleMenu();
           });
         </script>
-        <!-- <div class="logo">
-          <a href="#"
-            ><img
-              src="./scss/abstracts/images/logoV2 IMPROVED.svg"
-              alt="logosvg"
-          /></a>
-        </div> -->
         
+        <div id="logo">
+          <img id="logo" src="./scss/abstracts/images/logoV2 IMPROVED.svg"></img>
+        </div>
         <ul class="menuItems">
-          <li id="logo">
+          <!-- <li id="logo">
             <img id="logo" src="./scss/abstracts/images/logoV2 IMPROVED.svg"></img>
-          </li>
+          </li> -->
           <li><a class="hover" href="#home" onclick="toggleMenu();">Home</a></li>
           <li><a class="hover" href="#start" onclick="toggleMenu();">Projects</a></li>
           <li><a class="hover" href="#timeline" onclick="toggleMenu();">Timeline</a></li>
@@ -75,28 +71,29 @@
       </nav>
     </div>
 
-    <div id="projects">
-      <div class="pjHead"><h1 class="empha">Projects</h1></div>
-      <div class="carousel">
-        <div class="carousel__item carousel__item--visible">
-          <img src="./scss/abstracts/images/enigmatic.png" />
-        </div>
-        <div class="carousel__item">
-          <img src="./scss/abstracts/images/Útan Mærr.png" />
-        </div>
-        <div class="carousel__item">
-          <img src="./scss/abstracts/images/download (1).jpg" />
-        </div>
+        <div id="projects">
+          <div class="pjHead"><h1 class="empha">Projects</h1></div>
+          <div class="carousel">
+            <div class="carousel__item carousel__item--visible">
+              <img src="./scss/abstracts/images/enigmatic.png" />
+            </div>
+            <div class="carousel__item">
+              <img src="./scss/abstracts/images/Útan Mærr.png" />
+            </div>
+            <div class="carousel__item">
+              <img src="./scss/abstracts/images/download (1).jpg" />
+            </div>
 
-        <div class="carousel__actions">
-          <button id="carousel__button--prev" aria-label="Previous slide">
-            <
-          </button>
-          <button id="carousel__button--next" aria-label="Next slide">></button>
+            <div class="carousel__actions">
+              <button id="carousel__button--prev" aria-label="Previous slide">
+                Prev
+              </button>
+              <button id="carousel__button--next" aria-label="Next slide">Next</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <section id="timeline"></section>
+<br>
+  <section id="timeline"></section>
     <div class="progress">
       <div class="jhead">
         <h1 class="empha">This has been My Journey Thus Far ...</h1>
@@ -213,6 +210,7 @@
         </div>
       </div>
     </div>
+<br>
     <section id="about"></section>
     <div class="aboutMe">
       <div class="jhead"><h1 class="empha">Who is this guy?</h1></div>
@@ -233,7 +231,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"></div>
+    <!-- <div class="parallax"></div> -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./main.js"></script>
   </body>

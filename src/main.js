@@ -10,9 +10,9 @@ const links = document.querySelectorAll(".menuItems li");
     // alert("hallo");
     $(".icon").toggleClass("close");
     navLinks.classList.toggle("open");
-    links.forEach(link => {
-      link.classList.toggle("fade");
-    });
+    // links.forEach(link => {
+    //   link.classList.toggle("fade");
+    // });
   };
 
   //---> CAROUSEL FUNCTIONALITY <---//
@@ -62,7 +62,7 @@ const links = document.querySelectorAll(".menuItems li");
     updateSlidePosition();
   }
 
-  const scroll = new SmoothScroll('.menuItems li a[href*="#"]', {
+  const scroll = new SmoothScroll(' a[href*="#"]', {
     speed:1000
   });
 

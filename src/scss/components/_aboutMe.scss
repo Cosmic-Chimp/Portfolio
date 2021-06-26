@@ -2,6 +2,12 @@
 @use '../abstracts/typography.scss';
 @use '../abstracts/mixins';
 
+.jhead {
+  font-size: 2rem;
+  @include mixins.screen("mobile") {
+    font-size: 1rem;
+  }
+}
 .box {
   display: flex;
   justify-content: center;
@@ -19,15 +25,23 @@
   width: 450px;
   height: 450px;
   background: colors.$jungleG;
-  margin: 50px;
-  padding: 5em;
-  color: colors.$bBlue;
+  margin-top: 50px;
+  padding: 3em;
+  color: colors.$white;
   justify-self: center;
   & p {
     margin: 0;
   }
+  & h2 {
+    // text-align: center;
+    margin: 5px;
+    padding: 5px;
+  }
 }
 
+#abtH2 {
+  color: colors.$bBlue;
+}
 .socials {
   display: flex;
   justify-content: center;
@@ -37,8 +51,11 @@
 
 .smIcons {
   margin: 0.5em;
+  padding-top: 4em;
   & img {
-    height: 3.5em;
-    color: aqua;
+    height: 3.25em;
+    &:hover {
+      box-shadow: 0 0 3px chartreuse;
+    }
   }
 }
