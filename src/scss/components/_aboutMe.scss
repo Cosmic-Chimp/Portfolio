@@ -22,13 +22,21 @@
   width: 100%;
 }
 .abt {
-  width: 450px;
-  height: 450px;
+  width: 80%;
+  height: auto;
   background: colors.$jungleG;
   margin-top: 50px;
   padding: 3em;
   color: colors.$white;
+  // border-radius: 1rem;
   justify-self: center;
+  // box-shadow: colors.$bgClr 0px 5px 15px;
+  @include mixins.screen("mobile") {
+    width: 100%;
+  }
+  @include mixins.screen("tablet") {
+    width: 95%;
+  }
   & p {
     margin: 0;
   }
@@ -47,6 +55,7 @@
   justify-content: center;
   align-items: center;
   padding: 2em;
+  padding-bottom: 0 !important;
 }
 
 .smIcons {

@@ -622,13 +622,23 @@ nav {
 }
 
 .abt {
-  width: 450px;
-  height: 450px;
+  width: 80%;
+  height: auto;
   background: #12211f;
   margin-top: 50px;
   padding: 3em;
   color: #ffffffbe;
   justify-self: center;
+}
+@media only screen and (max-width: 767px) {
+  .abt {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .abt {
+    width: 95%;
+  }
 }
 .abt p {
   margin: 0;
@@ -647,6 +657,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 2em;
+  padding-bottom: 0 !important;
 }
 
 .smIcons {
