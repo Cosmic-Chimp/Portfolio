@@ -16,7 +16,6 @@ const links = document.querySelectorAll(".menuItems li");
   };
 
   //---> CAROUSEL FUNCTIONALITY <---//
-
   let slidePosition = 0;
   const slides = document.getElementsByClassName('carousel__item');
   const totalSlides = slides.length;
@@ -62,9 +61,41 @@ const links = document.querySelectorAll(".menuItems li");
     updateSlidePosition();
   }
 
+
+
+    // this is an imported animation for smooth scrolling//
   const scroll = new SmoothScroll(' a[href*="#"]', {
     speed:1000
   });
+
+
+
+
+/// Form//
+  const inputs = document.querySelectorAll(".input");
+
+  function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+  }
+  
+  function blurFunc() {
+    let parent = this.parentNode;
+    if (this.value == "") {
+      parent.classList.remove("focus");
+    }
+  }
+  
+  inputs.forEach((input) => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+  });
+
+
+
+
+
+
 
   // $('input').on('change', function() {
   //   $('body').toggleClass('blue');
