@@ -87,15 +87,15 @@ section p {
   position: relative;
   @include mixins.screen("mobile") {
     width: 400px;
-    height: 150px;
+    height: auto;
   }
   @include mixins.screen("tablet") {
     width: 500px;
-    height: 200px;
+    height: auto;
   }
   @media (max-width: 1015px) and (min-width: 810px) {
     width: 500px;
-    height: 200px;
+    height: auto;
   }
 }
 .wrapper .row section::before {
