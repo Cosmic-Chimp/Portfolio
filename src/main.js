@@ -10,9 +10,6 @@ const links = document.querySelectorAll(".menuItems li");
     // alert("hallo");
     $(".icon").toggleClass("close");
     navLinks.classList.toggle("open");
-    // links.forEach(link => {
-    //   link.classList.toggle("fade");
-    // });
   };
 
   //---> CAROUSEL FUNCTIONALITY <---//
@@ -69,8 +66,6 @@ const links = document.querySelectorAll(".menuItems li");
   });
 
 
-
-
 /// Form//
   const inputs = document.querySelectorAll(".input");
 
@@ -92,11 +87,32 @@ const links = document.querySelectorAll(".menuItems li");
   });
 
 
+// fullscreen popup on carouselItem click//
+
+      // create references to the modal...
+let modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+let images = document.getElementsByClassName('carousel__item');
+// the image in the modal
+let modalImg = document.getElementById("img01");
+// and the caption in the modal
+let btns = document.getElementsByClassName("imgbtns");
 
 
+// loop through the images with class
+for (let i = 0; i < images.length; i++) {
+  let img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function() {
+    // console.log(evt);
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    // btns.innerHTML = this.alt;
+  }
+}
 
+let span = document.getElementsByClassName("close")[0];
 
-
-  // $('input').on('change', function() {
-  //   $('body').toggleClass('blue');
-  // });
+span.onclick = function() {
+  modal.style.display = "none";
+}

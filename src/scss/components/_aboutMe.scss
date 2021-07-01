@@ -23,11 +23,14 @@
 }
 .abt {
   width: 80%;
-  min-height: 55vh;
+  min-height: 40vh;
   background: colors.$jungleG;
   margin-top: 50px;
   padding: 3em;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
   color: colors.$white;
+  line-height: 2.5rem;
   // border-radius: 1rem;
   justify-self: center;
   // box-shadow: colors.$bgClr 0px 5px 15px;
@@ -252,13 +255,13 @@ textarea.input {
 }
 
 .text {
-  color: #333;
+  color: white;
   margin: 1.5rem 0 2rem 0;
 }
 
 .information {
   display: flex;
-  color: #555;
+  color: white;
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
@@ -274,7 +277,7 @@ textarea.input {
 }
 
 .social-media p {
-  color: #333;
+  color: white;
 }
 
 .square {

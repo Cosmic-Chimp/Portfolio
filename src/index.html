@@ -77,16 +77,16 @@
 
         <div id="projects">
           <div class="pjHead"><h1 class="empha">Projects</h1></div>
-          <div class="carousel">
-            <div class="carousel__item carousel__item--visible">
+          <ul class="carousel">
+            <li class="carousel__item carousel__item--visible">
               <img src="./scss/abstracts/images/enigmatic.png" />
-            </div>
-            <div class="carousel__item">
+            </li>
+            <li class="carousel__item">
               <img src="./scss/abstracts/images/Útan Mærr.png" />
-            </div>
-            <div class="carousel__item">
+            </li>
+            <li class="carousel__item">
               <img src="./scss/abstracts/images/Number Guesser.png" />
-            </div>
+            </li>            
 
             <div class="carousel__actions">
               <button id="carousel__button--prev" aria-label="Previous slide">
@@ -94,7 +94,14 @@
               </button>
               <button id="carousel__button--next" aria-label="Next slide">Next</button>
             </div>
-          </div>
+
+            <div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01" src="">
+              <button class="imgbtns">Code</button><button class="imgbtns">Live Site</button>
+            </div>
+
+          </ul>
         </div>
 <!-- <br> -->
   <section id="timeline"></section>
@@ -108,13 +115,15 @@
           <section>
             <div class="ball"></div>
             <div class="details">
-              <span class="title">The Genesis of my Passion</span>
+              <span class="title"> 🏁	&nbsp;Where it began</span>
               <span>December 2020</span>
             </div>
             <p>
-              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
-              qui veroes praesentium maiores, sint eos vero sapiente voluptas
-              debitis dicta dolore.
+              My interest with coding began with my older brother, he has 
+              told me a lot about it from early 2019,but at the time I didnt think too much
+              of it since I thought i would be too dumb to participate. However... in 
+              December of 2020 I decided to join a course for web development basics
+              on Coursera
             </p>
             <div class="bottom">
               <!-- <a href="#">Read more</a> -->
@@ -126,13 +135,14 @@
           <section>
             <div class="ball"></div>
             <div class="details">
-              <span class="title">Title of Section 2</span>
-              <span>2nd Jan 2021</span>
+              <span class="title">💖&nbsp;The Genesis of my Passion for Coding and Technology</span>
+              <span>1st Feb 2021</span>
             </div>
             <p>
-              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
-              qui veroes praesentium maiores, sint eos vero sapiente voluptas
-              debitis dicta dolore.
+              At last! I've finished my first course about coding. On February the second
+              I completed Coursera's course "HTML, CSS, and Javascript for Web Developers" with a 100%
+              for all my assignments. This is when I first started becoming excited about coding because
+              it's when I realised that I could atleast do 'some' of the things involved with coding.
             </p>
             <div class="bottom">
               <!-- <a href="#">Read more</a>
@@ -144,13 +154,16 @@
           <section>
             <div class="ball"></div>
             <div class="details">
-              <span class="title">Title of Section 3</span>
-              <span>3rd Jan 2021</span>
+              <span class="title">🖥️&nbsp;CodeCademy</span>
+              <span>5th Feb 2021</span>
             </div>
             <p>
-              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
-              qui veroes praesentium maiores, sint eos vero sapiente voluptas
-              debitis dicta dolore.
+              After completing the previously mentioned course from Coursera, I started 
+              learning to code through CodeCademy.I joined them in December of 2020 but didn't start
+              with the fullstack course yet,as I wanted to complete what I had started with on 
+              Coursera.The first few classes on CodeCademy were very different from coursera,and much
+              more difficult, but me being the person that I am, I saw it as a challenge 
+              and it piqued my interest even more.
             </p>
             <div class="bottom">
               <!-- <a href="#">Read more</a>
@@ -162,13 +175,16 @@
           <section>
             <div class="ball"></div>
             <div class="details">
-              <span class="title">Title of Section 4</span>
-              <span>4th Jan 2021</span>
+              <span class="title">⚠️&nbsp; First Fun but Challenging project</span>
+              <span>7th Apr 2021</span>
             </div>
             <p>
-              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
-              qui veroes praesentium maiores, sint eos vero sapiente voluptas
-              debitis dicta dolore.
+              On this day I completed a project that caused me a lot of headache
+              at the time. Project name: Mixed Messages.
+              The goal for this project was to use my javascript skills to make a random string generator
+              that pulls data from three different sources. The three different sources I used are three arrays.
+              One with jokes, one with songs and one with funny quotes I got from the internet that are generated by A.I. 
+              The project's tasks did not include the need to use html and css, but I incorporated these technologies to challenge my own skills.
             </p>
             <div class="bottom">
               <!-- <a href="#">Read more</a>
@@ -180,13 +196,19 @@
           <section>
             <div class="ball"></div>
             <div class="details">
-              <span class="title">Title of Section 5</span>
-              <span>5th Jan 2021</span>
+              <span class="title">🧪&nbsp; Experimenting with CSS</span>
+              <span>31st May 2021</span>
             </div>
             <p>
-              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
-              qui veroes praesentium maiores, sint eos vero sapiente voluptas
-              debitis dicta dolore.
+              I started playing around with FlexBox and completed a project I was tasked
+              to do by CodeCademy. 
+              For this project I had to create a company of my choice and create a responsive website for said company/business.
+              I had to do this using only responsive units and flexbox. I chose to go with a photographer's website
+              as it would show off flexbox's attributes best.
+              This is a project very near and dear to me, because it was my 
+              first project that had really cool styling added to it.
+              I do plan on improving this one in the future, but first I have a couple of really rad ideas 
+              that I want to work on first... So stay tuned!!!
             </p>
             <div class="bottom">
               <!-- <a href="#">Read more</a>
@@ -198,13 +220,36 @@
           <section>
             <div class="ball"></div>
             <div class="details">
-              <span class="title">Title of Section 6</span>
-              <span>6th Jan 2021</span>
+              <span class="title">🤯&nbsp; CSS Grid === Unlimited POWER!</span>
+              <span>2 Jun 2021</span>
             </div>
             <p>
-              Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed
-              qui veroes praesentium maiores, sint eos vero sapiente voluptas
-              debitis dicta dolore.
+              After completing my testing with Flexbox, I started doing a project 
+              with CSS Grid.In this project I gathered images from soundcloud	&#40;for the song cover images&#41; 
+              and unsplash&#40;the banner/hero images&#41;. I decided to make up a dj name and make a very basic website for him.
+              Needless to say, I will forever use CSS Grid.
+            </p>
+            <div class="bottom">
+              <!-- <a href="#">Read more</a>
+                <i>- Someone famous</i> -->
+            </div>
+          </section>
+        </div>
+        <div class="row row-1">
+          <section>
+            <div class="ball"></div>
+            <div class="details">
+              <span class="title">🔮	&nbsp; What the future holds</span>
+              <span>Let me know</span>
+            </div>
+            <p>
+              A bunch of next level projects 
+              <br>
+              <br>
+              &amp;
+              <br>
+              <br>
+              Potentially joining YOUR company to work on solutions😎
             </p>
             <div class="bottom">
               <!-- <a href="#">Read more</a>
@@ -217,15 +262,17 @@
 <!-- <br> -->
 <section id="about"></section>
     <div class="aboutMe">
-      <div class="jhead"><h1 class="empha">Who is this guy?</h1></div>
+      <div class="jhead"><h1 class="empha">Who am I?</h1></div>
       <div class="box">
         <div class="abt">
           <h2 id="abtH2">About Me</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            voluptatem numquam eius facere cum. Aut cumque, accusantium vero quo
-            laudantium nostrum delectus! Veniam adipisci repellat, quaerat ullam
-            assumenda itaque magni!
+            <li>👋 Hi, I’m @Cosmic-Chimp aka Rueben</li>
+            <li>📘 I’m currently learning about code through CodeCademy's Full-Stack Engineer Path</li>
+            <li>🧠 I’m always happy to learn new things and I'm super excited about how the tech world is progressing</li>
+            <li>👀 I’m interested in improving my life aswell as other people's lives through the use of technology</li>
+            <li>🥅 My goal for this year is to become better with JavaScript,SASS and Node.js</li>
+            <li>🕹️ Fun fact about me: I love gaming and plan on making my own platform game somewhere in the future</li>
           </p>
             <!-- <div class="socials">
               <a class="smIcons" href="https://github.com/Cosmic-Chimp" target="_blank"><img src="./scss/abstracts/icons/iconmonstr-github-1.svg" alt="github-Link"></a>
