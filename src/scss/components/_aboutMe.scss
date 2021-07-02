@@ -165,6 +165,37 @@ h3.ctctMe {
   margin: 1rem 0;
 }
 
+.input-container.success input {
+  border-color: colors.$iconClr;
+}
+.input-container.error input {
+  border-color: red;
+}
+
+.input-container.success i.fa-check-circle {
+  visibility: visible;
+  color: colors.$iconClr;
+}
+.input-container.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: red;
+}
+.input-container.error small {
+  visibility: visible;
+  color: red;
+}
+.input-container i {
+  visibility: hidden;
+  position: absolute;
+  top: 25%;
+  right: 5%;
+}
+.input-container small {
+  visibility: hidden;
+  position: absolute;
+  bottom: -5;
+  left: 0;
+}
 .input {
   width: 100%;
   outline: none;
