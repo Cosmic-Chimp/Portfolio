@@ -59,32 +59,38 @@ const links = document.querySelectorAll(".menuItems li");
   }
 
 
+// fullscreen popup on carouselItem click//
 
-    // this is an imported animation for smooth scrolling//
-  const scroll = new SmoothScroll(' a[href*="#"]', {
-    speed:1000
-  });
+      // create references to the modal...
+let modal = document.getElementById('myModal');
+// get images
+let images = document.getElementsByClassName('carousel__item');
+// the image in the modal
+let modalImg = document.getElementById("img01");
+// btns under images
+let btns = document.getElementsByClassName("imgbtns");
 
 
-/// Form//
-  // const inputs = document.querySelectorAll(".input");
+// loop through the images with class
+for (let i = 0; i < images.length; i++) {
+  let img = images[i];
 
-  // function focusFunc() {
-  //   let parent = this.parentNode;
-  //   parent.classList.add("focus");
-  // }
-  
-  // function blurFunc() {
-  //   let parent = this.parentNode;
-  //   if (this.value == "") {
-  //     parent.classList.remove("focus");
-  //   }
-  // }
-  
-  // inputs.forEach((input) => {
-  //   input.addEventListener("focus", focusFunc);
-  //   input.addEventListener("blur", blurFunc);
-  // });
+  img.onclick = function(evt) {
+    console.log(evt);
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    // btns.innerHTML = this.alt;
+  }
+}
+
+let span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+
 
 // form validation client side//
 
@@ -135,63 +141,7 @@ function isEmail(email) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-// SOCIAL PANEL JS
-const floating_btn = document.querySelector('.floating-btn');
-const close_btn = document.querySelector('.close-btn');
-const social_panel_container = document.querySelector('.social-panel-container');
-
-floating_btn.addEventListener('click', () => {
-	social_panel_container.classList.toggle('visible')
-});
-
-close_btn.addEventListener('click', () => {
-	social_panel_container.classList.remove('visible')
-});
-
-
-
-
-
-
-
-
-// fullscreen popup on carouselItem click//
-
-      // create references to the modal...
-let modal = document.getElementById('myModal');
-// to all images -- note I'm using a class!
-let images = document.getElementsByClassName('carousel__item');
-// the image in the modal
-let modalImg = document.getElementById("img01");
-// and the caption in the modal
-let btns = document.getElementsByClassName("imgbtns");
-
-
-// loop through the images with class
-for (let i = 0; i < images.length; i++) {
-  let img = images[i];
-  // and attach our click listener for this image.
-  img.onclick = function() {
-    // console.log(evt);
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    // btns.innerHTML = this.alt;
-  }
-}
-
-let span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // this is an imported animation for smooth scrolling//
+    const scroll = new SmoothScroll(' a[href*="#"]', {
+      speed:1000
+    });

@@ -389,6 +389,16 @@ nav {
     transform: opacity radial;
   }
 }
+#myModal {
+  min-width: 80%;
+  min-height: 60vh;
+  border: 10px solid red;
+}
+
+#img01 {
+  border: 5px solid #300bd6;
+}
+
 .jhead {
   display: flex;
   justify-content: center;

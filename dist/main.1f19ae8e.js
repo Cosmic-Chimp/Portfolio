@@ -184,28 +184,38 @@ function moveToPrevSlide() {
   }
 
   updateSlidePosition();
-} // this is an imported animation for smooth scrolling//
+} // fullscreen popup on carouselItem click//
+// create references to the modal...
 
 
-var scroll = new SmoothScroll(' a[href*="#"]', {
-  speed: 1000
-}); /// Form//
-// const inputs = document.querySelectorAll(".input");
-// function focusFunc() {
-//   let parent = this.parentNode;
-//   parent.classList.add("focus");
-// }
-// function blurFunc() {
-//   let parent = this.parentNode;
-//   if (this.value == "") {
-//     parent.classList.remove("focus");
-//   }
-// }
-// inputs.forEach((input) => {
-//   input.addEventListener("focus", focusFunc);
-//   input.addEventListener("blur", blurFunc);
-// });
-// form validation client side//
+var modal = document.getElementById('myModal'); // get images
+
+var images = document.getElementsByClassName('carousel__item'); // the image in the modal
+
+var modalImg = document.getElementById("img01"); // btns under images
+
+var btns = document.getElementsByClassName("imgbtns"); // loop through the images with class
+
+var _loop = function _loop(i) {
+  var img = images[i];
+
+  img.onclick = function (evt) {
+    console.log(evt);
+    modal.style.display = "block";
+    modalImg.src = img.src; // btns.innerHTML = this.alt;
+  };
+};
+
+for (var i = 0; i < images.length; i++) {
+  _loop(i);
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function () {
+  modal.style.display = "none";
+}; // form validation client side//
+
 
 var form = document.getElementById('form');
 var username = document.getElementById('userName');
@@ -249,47 +259,12 @@ function setSuccessFor(input) {
 
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-} // SOCIAL PANEL JS
+} // this is an imported animation for smooth scrolling//
 
 
-var floating_btn = document.querySelector('.floating-btn');
-var close_btn = document.querySelector('.close-btn');
-var social_panel_container = document.querySelector('.social-panel-container');
-floating_btn.addEventListener('click', function () {
-  social_panel_container.classList.toggle('visible');
+var scroll = new SmoothScroll(' a[href*="#"]', {
+  speed: 1000
 });
-close_btn.addEventListener('click', function () {
-  social_panel_container.classList.remove('visible');
-}); // fullscreen popup on carouselItem click//
-// create references to the modal...
-
-var modal = document.getElementById('myModal'); // to all images -- note I'm using a class!
-
-var images = document.getElementsByClassName('carousel__item'); // the image in the modal
-
-var modalImg = document.getElementById("img01"); // and the caption in the modal
-
-var btns = document.getElementsByClassName("imgbtns"); // loop through the images with class
-
-var _loop = function _loop(i) {
-  var img = images[i]; // and attach our click listener for this image.
-
-  img.onclick = function () {
-    // console.log(evt);
-    modal.style.display = "block";
-    modalImg.src = img.src; // btns.innerHTML = this.alt;
-  };
-};
-
-for (var i = 0; i < images.length; i++) {
-  _loop(i);
-}
-
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function () {
-  modal.style.display = "none";
-};
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -318,7 +293,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62150" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54235" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
