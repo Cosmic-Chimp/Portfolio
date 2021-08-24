@@ -65,7 +65,10 @@ body {
 
 .modal-content {
   margin: auto;
-  display: block;
+  // display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   max-width: 700px;
 }

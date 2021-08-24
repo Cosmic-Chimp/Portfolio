@@ -131,12 +131,8 @@
 #myModal {
   min-width: 80%;
   min-height: 60vh;
-  border: 10px solid red;
 }
 
 #img01 {
-  // transform: scale(1);
-  // // width: 80%;
-  // // height: 60vh;
-  border: 5px solid rgb(48, 11, 214);
+  border: 0.15em solid colors.$drkrPrim;
 }

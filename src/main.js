@@ -64,7 +64,7 @@ const links = document.querySelectorAll(".menuItems li");
       // create references to the modal...
 let modal = document.getElementById('myModal');
 // get images
-let images = document.getElementsByClassName('carousel__item');
+let lis = document.getElementsByClassName('carousel__item');
 // the image in the modal
 let modalImg = document.getElementById("img01");
 // btns under images
@@ -72,14 +72,33 @@ let btns = document.getElementsByClassName("imgbtns");
 
 
 // loop through the images with class
-for (let i = 0; i < images.length; i++) {
-  let img = images[i];
-
+let imgId = '';
+for (let i = 0; i < lis.length; i++) {
+  let li = lis[i];
+  let img = li.getElementsByTagName('img')[0];
   img.onclick = function(evt) {
-    console.log(evt);
+    // console.log(evt);
     modal.style.display = "block";
     modalImg.src = img.src;
-    // btns.innerHTML = this.alt;
+    imgId = img.id;
+    // console.log(img);
+
+    kodeBtn = document.getElementById('kodeBtn');
+    liveBtn = document.getElementById('liveBtn');
+
+    if(imgId === 'enigmatic') {
+      console.log(kodeBtn);
+      kodeBtn.href = 'https://github.com/Cosmic-Chimp/CSS-Grid-Practise'
+      liveBtn.href = 'https://cosmic-chimp.github.io/CSS-Grid-Practise/#Enigma'
+    }
+    else if(imgId === 'Utan') {
+      kodeBtn.href = 'https://github.com/Cosmic-Chimp/FlexBoxProject'
+      liveBtn.href = 'https://cosmic-chimp.github.io/FlexBoxProject/'
+    }
+    else {
+      kodeBtn.href = 'https://github.com/Cosmic-Chimp/CodeAC'
+      liveBtn.href = ' https://cosmic-chimp.github.io/CodeAC/number-guesser-starting/index.html'
+    }
   }
 }
 
@@ -90,16 +109,14 @@ span.onclick = function() {
 }
 
 
-
-
 // form validation client side//
 
 const form = document.getElementById('form');
 const username = document.getElementById('userName');
 const email = document.getElementById('Email');
 
-form.addEventListener('submit', e => {
-	e.preventDefault();
+form.addEventListener('submit', () => {
+	// e.preventDefault();
 	
 	checkInputs();
 });
