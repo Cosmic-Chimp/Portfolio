@@ -26,4 +26,4 @@ Please feel free to give me advice on where I can improve upon my code, I will g
 
 ## Launch
 
-Click on this link to see the site: https://cosmic-chimp.github.io/Portfolio/dist/index.html#home
+Click on this link to see the site: https://cosmic-chimp.github.io/Portfolio/dist/index.html
