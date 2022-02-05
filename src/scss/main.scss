@@ -3,18 +3,17 @@
 // try putting multiple dives after each other with the svg as bg then animate them based on id or class//
 
 // --> Abstracts <-- //
-@use 'abstracts/colors';
+@use "abstracts/colors";
 @use "abstracts/typography.scss";
-@use 'abstracts/mixins';
+@use "abstracts/mixins";
 
 // --> Components <-- //
-@use 'components/buttons';
-@use 'components/banner';
-@use 'components/navbar';
-@use 'components/projects';
-@use 'components/timeline';
-@use 'components/aboutMe';
-
+@use "components/buttons";
+@use "components/banner";
+@use "components/navbar";
+@use "components/projects";
+@use "components/timeline";
+@use "components/aboutMe";
 // BODY Styling //
 * {
   box-sizing: border-box;
@@ -35,6 +34,32 @@ body {
   background-size: cover;
 }
 
+.swiper {
+  padding: 0px;
+  width: 60%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  // @include screen("mobile") {
+  //   height: 200px;
+  // }
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  z-index: 2;
+  width: 100%; /* or any custom size */
+  height: 100%;
+  object-fit: contain;
+  display: flex;
+}
+
 .carousel__item {
   cursor: pointer;
   transition: 0.3s;
@@ -45,7 +70,7 @@ body {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 5;
+  z-index: 20;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -65,17 +90,44 @@ body {
 
 .modal-content {
   margin: auto;
-  // display: block;
+  display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  max-width: 700px;
+  // width: 100%;
+  max-width: 50vw;
+  max-height: 50vh;
 }
 
+.pagiCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination {
+  background-color: hsla(0, 6%, 50%, 0.15);
+  // position: absolute;
+  width: 20vw !important;
+  height: 1em;
+  border-radius: 100rem;
+  &.swiper-pagination-bullets {
+    --swiper-theme-color: #00b898;
+    bottom: -10px;
+  }
+  &.swiper-pagination-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.btnCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .imgbtns {
   margin: 5px;
-  display: inline-block;
+  // display: inline-block;
   width: 25%;
   max-width: 700px;
   text-align: center;
@@ -124,6 +176,11 @@ body {
     width: 100%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .swiper {
+    width: 25rem;
+  }
+}
 
 // ---> Old Ideas <--- //
 //background-color: #d6d6d6;
@@ -138,4 +195,16 @@ body {
 //   object-fit: cover;
 //   height: 100%;
 //   width: 100%;
+// }
+//swiper stuffs
+// .swiper-container {
+//   // width: 600px;
+//   height: 500px;
+// }
+// .swiper-slide {
+//   background: #ccc;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 60px;
 // }

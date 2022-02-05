@@ -3,6 +3,14 @@
   this project from diff pc-->
 <html lang="en">
   <head>
+    <!--SwiperJS cdn-->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+
+  
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -77,8 +85,27 @@
 
         <div id="projects">
           <div class="pjHead"><h1 class="empha">Projects</h1></div>
-          <ul class="carousel">
 
+
+          <!-- Slider main container -->
+    <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./scss/abstracts/images/enigmatic.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./scss/abstracts/images/Number Guesser.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./scss/abstracts/images/Útan Mærr.png" />
+              </div>
+            </div>
+            <div class="pagiCont">
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <!-- <ul class="carousel">
             <li id="myImg" class="carousel__item carousel__item--visible">
               <img id='enigmatic' src="./scss/abstracts/images/enigmatic.png" />
             </li>
@@ -96,13 +123,15 @@
                 Prev
               </button>
               <button id="carousel__button--next" aria-label="Next slide">Next</button>
-            </div>
+            </div> -->
 
             <div id="myModal" class="modal">
               <span class="close">&times;</span>
               <img id="img01" class="modal-content">
-              <a target='_blank' href='' id='kodeBtn' class="imgbtns">Code</a>
-              <a target='_blank' href='' id='liveBtn' class="imgbtns">Live Site</a>
+              <div class="btnCont">
+                <a target='_blank' href='' id='kodeBtn' class="imgbtns">Code</a>
+                <a target='_blank' href='' id='liveBtn' class="imgbtns">Live Site</a>
+              </div>
             </div>
 
           </ul>
@@ -278,11 +307,7 @@
             <li>🥅 My goal for this year is to become better with JavaScript,SASS and Node.js</li>
             <li>🕹️ Fun fact about me: I love gaming and plan on making my own platform game somewhere in the future</li>
           </p>
-            <!-- <div class="socials">
-              <a class="smIcons" href="https://github.com/Cosmic-Chimp" target="_blank"><img src="./scss/abstracts/icons/iconmonstr-github-1.svg" alt="github-Link"></a>
-              <a class="smIcons" href="https://www.linkedin.com/in/rueben-schoeman-1276861a0/" target="_blank"><img src="./scss/abstracts/icons/iconmonstr-linkedin-4.svg" alt="linkedin-Link"></a>
-              <a class="smIcons" href="#" target="_blank"><img src="./scss/abstracts/icons/iconmonstr-gmail-4.svg" alt="email-link"></a>
-            </div> -->
+
         </div>
       </div>
     </div>
@@ -311,9 +336,6 @@
           <div class="social-media">
             <p>Connect with me :</p>
             <div class="social-icons">
-              <!-- <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
               <a href="#">
                 <i class="fab fa-twitter"></i>
               </a> -->
@@ -362,5 +384,22 @@
     <!-- <div class="parallax"></div> -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./main.js"></script>
+      
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+          shadow: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
   </body>
 </html>

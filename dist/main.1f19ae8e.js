@@ -118,12 +118,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 //--- Hamburger Menu Animation Script ---//
 var hamburger = document.querySelector(".hamburger");
 var navLinks = document.querySelector(".menuItems");
@@ -134,73 +128,59 @@ window.toggleMenu = function () {
   $(".icon").toggleClass("close");
   navLinks.classList.toggle("open");
 }; //---> CAROUSEL FUNCTIONALITY <---//
-
-
-var slidePosition = 0;
-var slides = document.getElementsByClassName('carousel__item');
-var totalSlides = slides.length; //console.log(totalslides)// 
-
-document.getElementById('carousel__button--next').addEventListener("click", function () {
-  moveToNextSlide();
-});
-document.getElementById('carousel__button--prev').addEventListener("click", function () {
-  moveToPrevSlide();
-});
-
-function updateSlidePosition() {
-  var _iterator = _createForOfIteratorHelper(slides),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var slide = _step.value;
-      slide.classList.remove('carousel__item--visible');
-      slide.classList.add('carousel__item--hidden');
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-
-  slides[slidePosition].classList.add('carousel__item--visible');
-}
-
-function moveToNextSlide() {
-  if (slidePosition === totalSlides - 1) {
-    slidePosition = 0;
-  } else {
-    slidePosition++;
-  }
-
-  updateSlidePosition();
-}
-
-function moveToPrevSlide() {
-  if (slidePosition === 0) {
-    slidePosition = totalSlides - 1;
-  } else {
-    slidePosition--;
-  }
-
-  updateSlidePosition();
-} // fullscreen popup on carouselItem click//
+// let slidePosition = 0;
+// const slides = document.getElementsByClassName('carousel__item');
+// const totalSlides = slides.length;
+// document.
+//   getElementById('carousel__button--next')
+//   .addEventListener("click", function() {
+//     moveToNextSlide();
+//   });
+// document.
+//   getElementById('carousel__button--prev')
+//   .addEventListener("click", function() {
+//     moveToPrevSlide();
+//   });
+// function updateSlidePosition() {
+//   for (let slide of slides) {
+//     slide.classList.remove('carousel__item--visible');
+//     slide.classList.add('carousel__item--hidden');
+//   }
+//   slides[slidePosition].classList.add('carousel__item--visible');
+// }
+// function moveToNextSlide() {
+//   if (slidePosition === totalSlides - 1) {
+//     slidePosition = 0;
+//   } else {
+//     slidePosition++;
+//   }
+//   updateSlidePosition();
+// }
+// function moveToPrevSlide() {
+//   if (slidePosition === 0) {
+//     slidePosition = totalSlides - 1;
+//   } else {
+//     slidePosition--;
+//   }
+//   updateSlidePosition();
+// }
+// fullscreen popup on carouselItem click//
 // create references to the modal...
 
 
-var modal = document.getElementById('myModal'); // get images
+var modal = document.getElementById("myModal"); // get images
 
-var lis = document.getElementsByClassName('carousel__item'); // the image in the modal
+var lis = document.getElementsByClassName("swiper-slide"); // the image in the modal
 
 var modalImg = document.getElementById("img01"); // btns under images
 
 var btns = document.getElementsByClassName("imgbtns"); // loop through the images with class
 
-var imgId = '';
+var imgId = "";
 
 var _loop = function _loop(i) {
   var li = lis[i];
-  var img = li.getElementsByTagName('img')[0];
+  var img = li.getElementsByTagName("img")[0];
 
   img.onclick = function (evt) {
     // console.log(evt);
@@ -208,19 +188,19 @@ var _loop = function _loop(i) {
     modalImg.src = img.src;
     imgId = img.id; // console.log(img);
 
-    kodeBtn = document.getElementById('kodeBtn');
-    liveBtn = document.getElementById('liveBtn');
+    kodeBtn = document.getElementById("kodeBtn");
+    liveBtn = document.getElementById("liveBtn");
 
-    if (imgId === 'enigmatic') {
+    if (imgId === "enigmatic") {
       console.log(kodeBtn);
-      kodeBtn.href = 'https://github.com/Cosmic-Chimp/CSS-Grid-Practise';
-      liveBtn.href = 'https://cosmic-chimp.github.io/CSS-Grid-Practise/#Enigma';
-    } else if (imgId === 'Utan') {
-      kodeBtn.href = 'https://github.com/Cosmic-Chimp/FlexBoxProject';
-      liveBtn.href = 'https://cosmic-chimp.github.io/FlexBoxProject/';
+      kodeBtn.href = "https://github.com/Cosmic-Chimp/CSS-Grid-Practise";
+      liveBtn.href = "https://cosmic-chimp.github.io/CSS-Grid-Practise/#Enigma";
+    } else if (imgId === "Utan") {
+      kodeBtn.href = "https://github.com/Cosmic-Chimp/FlexBoxProject";
+      liveBtn.href = "https://cosmic-chimp.github.io/FlexBoxProject/";
     } else {
-      kodeBtn.href = 'https://github.com/Cosmic-Chimp/CodeAC';
-      liveBtn.href = ' https://cosmic-chimp.github.io/CodeAC/number-guesser-starting/index.html';
+      kodeBtn.href = "https://github.com/Cosmic-Chimp/CodeAC";
+      liveBtn.href = " https://cosmic-chimp.github.io/CodeAC/number-guesser-starting/index.html";
     }
   };
 };
@@ -236,10 +216,10 @@ span.onclick = function () {
 }; // form validation client side//
 
 
-var form = document.getElementById('form');
-var username = document.getElementById('userName');
-var email = document.getElementById('Email');
-form.addEventListener('submit', function () {
+var form = document.getElementById("form");
+var username = document.getElementById("userName");
+var email = document.getElementById("Email");
+form.addEventListener("submit", function () {
   // e.preventDefault();
   checkInputs();
 });
@@ -249,16 +229,16 @@ function checkInputs() {
   var usernameValue = username.value.trim();
   var emailValue = email.value.trim();
 
-  if (usernameValue === '') {
-    setErrorFor(username, 'Username cannot be blank');
+  if (usernameValue === "") {
+    setErrorFor(username, "Username cannot be blank");
   } else {
     setSuccessFor(username);
   }
 
-  if (emailValue === '') {
-    setErrorFor(email, 'Email cannot be blank');
+  if (emailValue === "") {
+    setErrorFor(email, "Email cannot be blank");
   } else if (!isEmail(emailValue)) {
-    setErrorFor(email, 'Not a valid email');
+    setErrorFor(email, "Not a valid email");
   } else {
     setSuccessFor(email);
   }
@@ -266,14 +246,14 @@ function checkInputs() {
 
 function setErrorFor(input, message) {
   var formControl = input.parentElement;
-  var small = formControl.querySelector('small');
-  formControl.className = 'input-container error';
+  var small = formControl.querySelector("small");
+  formControl.className = "input-container error";
   small.innerText = message;
 }
 
 function setSuccessFor(input) {
   var formControl = input.parentElement;
-  formControl.className = 'input-container success';
+  formControl.className = "input-container success";
 }
 
 function isEmail(email) {
@@ -312,7 +292,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51000" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60419" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
