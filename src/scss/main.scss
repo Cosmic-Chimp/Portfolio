@@ -106,9 +106,10 @@ body {
 }
 .swiper-pagination {
   background-color: hsla(0, 6%, 50%, 0.15);
-  // position: absolute;
+  position: relative;
   width: 20vw !important;
   height: 1em;
+  float: right;
   border-radius: 100rem;
   &.swiper-pagination-bullets {
     --swiper-theme-color: #00b898;

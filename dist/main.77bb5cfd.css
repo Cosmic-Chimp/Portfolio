@@ -1013,8 +1013,10 @@ body {
 
 .swiper-pagination {
   background-color: rgba(135, 120, 120, 0.15);
+  position: relative;
   width: 20vw !important;
   height: 1em;
+  float: right;
   border-radius: 100rem;
 }
 .swiper-pagination.swiper-pagination-bullets {
