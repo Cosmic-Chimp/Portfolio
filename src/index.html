@@ -5,10 +5,9 @@
   <head>
     <!--SwiperJS cdn-->
     <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-  />
-
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   
 
     <meta charset="UTF-8" />
@@ -81,13 +80,16 @@
           <li><a href="#contact" onclick="toggleMenu();"><button id="contactBTN" >Contact</button></a></li>
         </ul>
       </nav>
+
     </div>
+<div class="prjH1">
+  <h1>Projects</h1>
+  <!-- <p class="desc">&nbsp; Move cube with finger or mouse</p> -->
+
+</div>
 
         <div id="projects">
-          <div class="pjHead"><h1 class="empha">Projects</h1></div>
 
-
-          <!-- Slider main container -->
     <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -100,47 +102,21 @@
               <div class="swiper-slide">
                 <img src="./scss/abstracts/images/Útan Mærr.png" />
               </div>
+              <!-- <div class="swiper-slide">
+                <img src="./scss/abstracts/images/" />
+              </div> -->
             </div>
-            <div class="pagiCont">
-              <div class="swiper-pagination"></div>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
-          <!-- <ul class="carousel">
-            <li id="myImg" class="carousel__item carousel__item--visible">
-              <img id='enigmatic' src="./scss/abstracts/images/enigmatic.png" />
-            </li>
-
-            <li id="myImg" class="carousel__item">
-              <img id='Utan' src="./scss/abstracts/images/Útan Mærr.png" />
-            </li>
-
-            <li id="myImg" class="carousel__item">
-              <img id='NumGuess' src="./scss/abstracts/images/Number Guesser.png" />
-            </li>            
-
-            <div class="carousel__actions">
-              <button id="carousel__button--prev" aria-label="Previous slide">
-                Prev
-              </button>
-              <button id="carousel__button--next" aria-label="Next slide">Next</button>
-            </div> -->
-
-            <div id="myModal" class="modal">
-              <span class="close">&times;</span>
-              <img id="img01" class="modal-content">
-              <div class="btnCont">
-                <a target='_blank' href='' id='kodeBtn' class="imgbtns">Code</a>
-                <a target='_blank' href='' id='liveBtn' class="imgbtns">Live Site</a>
-              </div>
-            </div>
-
-          </ul>
         </div>
+
 <!-- <br> -->
   <section id="timeline"></section>
     <div class="progress">
       <div class="jhead">
-        <h1 class="empha">This has been My Journey Thus Far ...</h1>
+        <h1 class="empha">This has been My Journey So Far ...</h1>
       </div>
       <div class="wrapper">
         <div class="center-line"></div>
@@ -251,7 +227,7 @@
           <section>
             <div class="ball"></div>
             <div class="details">
-              <span class="title">🤯&nbsp; CSS Grid === Unlimited POWER!</span>
+              <span class="title">🤯&nbsp;ReactJs === Unlimited POWER!</span>
               <span>2 Jun 2021</span>
             </div>
             <p>
@@ -336,9 +312,9 @@
           <div class="social-media">
             <p>Connect with me :</p>
             <div class="social-icons">
-              <a href="#">
+              <!-- <a href="#">
                 <i class="fab fa-twitter"></i>
-              </a> -->
+              </a> --> -->
               <a class="smIcons" href="https://github.com/Cosmic-Chimp" target="_blank"><img src="./scss/abstracts/icons/iconmonstr-github-1.svg" alt="github-Link"></a>
               <a class="smIcons" href="https://www.linkedin.com/in/rueben-schoeman-1276861a0/" target="_blank"><img src="./scss/abstracts/icons/iconmonstr-linkedin-4.svg" alt="linkedin-Link"></a>
               <a class="smIcons" href="#" target="_blank"><img src="./scss/abstracts/icons/iconmonstr-gmail-4.svg" alt="email-link"></a>
@@ -393,13 +369,22 @@
       var swiper = new Swiper(".mySwiper", {
         effect: "cube",
         grabCursor: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: false,
         cubeEffect: {
           shadow: false,
         },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         pagination: {
           el: ".swiper-pagination",
+          clickable: true,
         },
       });
     </script>
   </body>
+
 </html>

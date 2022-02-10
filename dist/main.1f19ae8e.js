@@ -127,92 +127,6 @@ window.toggleMenu = function () {
   // alert("hallo");
   $(".icon").toggleClass("close");
   navLinks.classList.toggle("open");
-}; //---> CAROUSEL FUNCTIONALITY <---//
-// let slidePosition = 0;
-// const slides = document.getElementsByClassName('carousel__item');
-// const totalSlides = slides.length;
-// document.
-//   getElementById('carousel__button--next')
-//   .addEventListener("click", function() {
-//     moveToNextSlide();
-//   });
-// document.
-//   getElementById('carousel__button--prev')
-//   .addEventListener("click", function() {
-//     moveToPrevSlide();
-//   });
-// function updateSlidePosition() {
-//   for (let slide of slides) {
-//     slide.classList.remove('carousel__item--visible');
-//     slide.classList.add('carousel__item--hidden');
-//   }
-//   slides[slidePosition].classList.add('carousel__item--visible');
-// }
-// function moveToNextSlide() {
-//   if (slidePosition === totalSlides - 1) {
-//     slidePosition = 0;
-//   } else {
-//     slidePosition++;
-//   }
-//   updateSlidePosition();
-// }
-// function moveToPrevSlide() {
-//   if (slidePosition === 0) {
-//     slidePosition = totalSlides - 1;
-//   } else {
-//     slidePosition--;
-//   }
-//   updateSlidePosition();
-// }
-// fullscreen popup on carouselItem click//
-// create references to the modal...
-
-
-var modal = document.getElementById("myModal"); // get images
-
-var lis = document.getElementsByClassName("swiper-slide"); // the image in the modal
-
-var modalImg = document.getElementById("img01"); // btns under images
-
-var btns = document.getElementsByClassName("imgbtns"); // loop through the images with class
-
-var imgId = "";
-
-var _loop = function _loop(i) {
-  var li = lis[i];
-  var img = li.getElementsByTagName("img")[0];
-
-  img.onclick = function (evt) {
-    // console.log(evt);
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    imgId = img.id; // console.log(img);
-
-    kodeBtn = document.getElementById("kodeBtn");
-    liveBtn = document.getElementById("liveBtn");
-
-    if (imgId === "enigmatic") {
-      console.log(kodeBtn);
-      kodeBtn.href = "https://github.com/Cosmic-Chimp/CSS-Grid-Practise";
-      liveBtn.href = "https://cosmic-chimp.github.io/CSS-Grid-Practise/#Enigma";
-    } else if (imgId === "Utan") {
-      kodeBtn.href = "https://github.com/Cosmic-Chimp/FlexBoxProject";
-      liveBtn.href = "https://cosmic-chimp.github.io/FlexBoxProject/";
-    } else {
-      kodeBtn.href = "https://github.com/Cosmic-Chimp/CodeAC";
-      liveBtn.href = " https://cosmic-chimp.github.io/CodeAC/number-guesser-starting/index.html";
-    }
-  };
-};
-
-for (var i = 0; i < lis.length; i++) {
-  _loop(i);
-}
-
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function () {
-  modal.style.display = "none";
 }; // form validation client side//
 
 
@@ -292,7 +206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52091" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59773" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

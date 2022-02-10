@@ -269,28 +269,28 @@ nav {
   position: relative;
   height: 100vh;
   width: 100%;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  font-size: 1.45em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
 }
 
 .pjHead {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5vmin;
+  padding: 5vmax;
   font-size: 2rem;
+  margin: 5em;
 }
 @media only screen and (max-width: 767px) {
   .pjHead {
     font-size: 1rem;
   }
-}
-
-#myModal {
-  min-width: 80%;
-  min-height: 60vh;
-}
-
-#img01 {
-  border: 0.15em solid #115c4f;
 }
 
 .jhead {
@@ -943,14 +943,38 @@ body {
   background-size: cover;
 }
 
+.prjH1 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.71);
+  margin: 0;
+  padding: 3em;
+  color: #ffffffbe;
+  text-shadow: 1px 1px 2px rgba(0, 184, 152, 0.88);
+  font-family: "Texturina", serif;
+}
+
 .swiper {
-  padding: 0px;
-  width: 60%;
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+@media only screen and (max-width: 767px) {
+  .swiper {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .swiper {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 .swiper-slide {
@@ -959,7 +983,6 @@ body {
 }
 
 .swiper-slide img {
-  z-index: 2;
   width: 100%;
   /* or any custom size */
   height: 100%;
@@ -967,89 +990,32 @@ body {
   display: flex;
 }
 
-.carousel__item {
-  cursor: pointer;
-  transition: 0.3s;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #00b898;
+  position: absolute;
+  top: 85%;
+  width: calc(var(--swiper-navigation-size) / 24 * 17);
 }
-
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 20;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 50vw;
-  max-height: 50vh;
-}
-
-.pagiCont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .swiper-pagination {
   background-color: rgba(135, 120, 120, 0.15);
+  position: absolute;
   width: 20vw !important;
   height: 1em;
+  left: none !important;
   border-radius: 100rem;
 }
 .swiper-pagination.swiper-pagination-bullets {
   --swiper-theme-color: #00b898;
-  bottom: -10px;
 }
 .swiper-pagination.swiper-pagination-horizontal {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.btnCont {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.imgbtns {
-  margin: 5px;
-  width: 25%;
-  max-width: 700px;
-  text-align: center;
-  background-color: #115c4f;
-  color: #ccc;
-  padding: 10px 0;
-  border-radius: 1rem;
-  height: 3em;
-  font-family: "Skranji", cursive;
-}
-
-.modal-content,
-.imgbtns {
-  animation-name: zoom;
-  animation-duration: 0.6s;
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes zoom {
@@ -1075,17 +1041,6 @@ body {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .swiper {
-    width: 25rem;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
