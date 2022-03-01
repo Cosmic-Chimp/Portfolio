@@ -83,7 +83,7 @@ section p {
   height: fit-content;
   // height: auto;
   // min-height: 17em;
-  // min-width: 300px;
+  min-width: 300px;
   padding: 20px;
   position: relative;
   @include mixins.screen("mobile") {

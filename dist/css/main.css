@@ -267,10 +267,8 @@ nav {
 #projects {
   background: rgba(0, 0, 0, 0.71);
   position: relative;
-  height: 100vh;
   width: 100%;
   position: relative;
-  height: 100vh;
   width: 100%;
   font-size: 1.45em;
   display: flex;
@@ -383,6 +381,7 @@ section p {
   border-radius: 15px;
   width: calc(50% - 45px);
   height: fit-content;
+  min-width: 300px;
   padding: 20px;
   position: relative;
 }
@@ -939,19 +938,6 @@ body {
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
-}
-
-.prjH1 {
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.71);
-  margin: 0;
-  padding: 3em;
-  color: #ffffffbe;
-  text-shadow: 1px 1px 2px rgba(0, 184, 152, 0.88);
-  font-family: "Texturina", serif;
 }
 
 .swiper {
