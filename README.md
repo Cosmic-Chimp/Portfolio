@@ -1,6 +1,6 @@
 # Portfolio
 
-> This is my official and first web development portfolio 
+> First version of my Portfolio
 
 ## Table of contents
 
@@ -10,9 +10,7 @@
 
 ## General info
 
-Hey, ill update the readme file once I'm done with the project :D
-
-Please feel free to give me advice on where I can improve upon my code, I will gladly accept.
+This was the first big project I built. It took my a long time to make but I did learn a lot from it. I intend on remixing this project with React some time in the future when I have more experience with animation in React as I have ideas for the site that would require some animation knowledge
 
 ## Technologies
 
